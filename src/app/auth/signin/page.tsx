@@ -11,9 +11,21 @@ export const metadata: Metadata = {
 };
 
 const SignIn: React.FC = () => {
+  const links = [
+    {
+      name: "Home",
+      path: "/",
+      active: false,
+    },
+    {
+      name: "Sign In",
+      path: "/auth/signin",
+      active: true,
+    },
+  ]
   return (
     <DefaultLayout>
-      <Breadcrumb pageName="Sign In" />
+      <Breadcrumb pageName="Sign In" links={links} />
 
       <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
         <div className="flex flex-wrap items-center">

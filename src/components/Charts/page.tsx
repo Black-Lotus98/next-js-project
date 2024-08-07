@@ -10,9 +10,22 @@ const ChartThree = dynamic(() => import("@/components/Charts/ChartThree"), {
 });
 
 const Chart: React.FC = () => {
+  const links =
+    [
+      {
+        name: "Home",
+        path: "/",
+        active: false,
+      },
+      {
+        name: "Chart",
+        path: "/chart",
+        active: true,
+      },
+    ]
   return (
     <>
-      <Breadcrumb pageName="Chart" />
+      <Breadcrumb pageName="Chart" links={links} />
 
       <div className="grid grid-cols-12 gap-4 md:gap-6 2xl:gap-7.5">
         <ChartOne />

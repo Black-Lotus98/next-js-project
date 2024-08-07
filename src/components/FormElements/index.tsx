@@ -15,9 +15,23 @@ import MultiSelect from "@/components/FormElements/MultiSelect";
 import SelectGroupTwo from "@/components/SelectGroup/SelectGroupTwo";
 
 const FormElements = () => {
+
+  const links =
+    [
+      {
+        name: "Home",
+        path: "/",
+        active: false,
+      },
+      {
+        name: "FormElements",
+        path: "/forms/form-elements",
+        active: true,
+      },
+    ]
   return (
     <>
-      <Breadcrumb pageName="FormElements" />
+      <Breadcrumb pageName="FormElements" links={links} />
 
       <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
         <div className="flex flex-col gap-9">

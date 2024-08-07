@@ -12,9 +12,22 @@ export const metadata: Metadata = {
 };
 
 const FormLayout = () => {
+  const links = [
+    {
+      name: "Home",
+      path: "/",
+      active: false,
+    },
+    {
+      name: "Form Layout",
+      path: "/forms/form-layout",
+      active: true,
+    },
+  ]
+
   return (
     <DefaultLayout>
-      <Breadcrumb pageName="FormLayout" />
+      <Breadcrumb pageName="FormLayout" links={links} />
 
       <div className="grid grid-cols-1 gap-9 sm:grid-cols-2">
         <div className="flex flex-col gap-9">

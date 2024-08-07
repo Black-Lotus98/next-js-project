@@ -11,10 +11,23 @@ export const metadata: Metadata = {
 };
 
 const Profile = () => {
+  const links = [
+    {
+      name: "Home",
+      path: "/",
+      active: false,
+    },
+    {
+      name: "Profile",
+      path: "/profile",
+      active: true,
+    },
+  ]
+
   return (
     <DefaultLayout>
       <div className="mx-auto max-w-242.5">
-        <Breadcrumb pageName="Profile" />
+        <Breadcrumb pageName="Profile" links={links} />
 
         <div className="overflow-hidden rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
           <div className="relative z-20 h-35 md:h-65">

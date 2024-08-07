@@ -13,9 +13,22 @@ export const metadata: Metadata = {
 };
 
 const TablesPage = () => {
+  const links =
+    [
+      {
+        name: "Home",
+        path: "/",
+        active: false,
+      },
+      {
+        name: "Tables",
+        path: "/tables",
+        active: true,
+      },
+    ]
   return (
     <DefaultLayout>
-      <Breadcrumb pageName="Tables" />
+      <Breadcrumb pageName="Tables" links={links} />
 
       <div className="flex flex-col gap-10">
         <TableOne />

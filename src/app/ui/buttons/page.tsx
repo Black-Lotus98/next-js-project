@@ -10,9 +10,22 @@ export const metadata: Metadata = {
 };
 
 const Buttons = () => {
+  const links =
+    [
+      {
+        name: "Home",
+        path: "/",
+        active: false,
+      },
+      {
+        name: "Buttons",
+        path: "/ui/buttons",
+        active: true,
+      },
+    ]
   return (
     <DefaultLayout>
-      <Breadcrumb pageName="Buttons" />
+      <Breadcrumb pageName="Buttons" links={links} />
 
       {/* <!-- Normal Button Items --> */}
       <div className="mb-10 rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">

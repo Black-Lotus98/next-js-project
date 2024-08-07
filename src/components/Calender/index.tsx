@@ -1,9 +1,22 @@
 import Breadcrumb from "../Breadcrumbs/Breadcrumb";
 
 const Calendar = () => {
+  const links = [
+    {
+      name: 'Dashboard',
+      path: '/',
+      active: false,
+    },
+    {
+      name: 'Calendar',
+      path: '/calendar',
+      active: true,
+    },
+  ];
+
   return (
     <div className="mx-auto max-w-7xl">
-      <Breadcrumb pageName="Calendar" />
+      <Breadcrumb pageName="Calendar" links={links} />
 
       {/* <!-- ====== Calendar Section Start ====== --> */}
       <div className="w-full max-w-full rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
